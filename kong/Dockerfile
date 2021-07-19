@@ -2,7 +2,7 @@ FROM kong:2.0.2-alpine
 
 USER root
 
-ENV KONG_PLUGINS=bundled,strip-prefix,security-headers,oidc
+ENV KONG_PLUGINS=bundled,oidc
 
 # Add libs
 ADD lib/resty/openidc.lua /usr/local/openresty/lualib/resty/openidc.lua
